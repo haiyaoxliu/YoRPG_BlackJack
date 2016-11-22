@@ -5,8 +5,8 @@ Team Members
 
 name, email, username
 
-Haiyao Liu, hliu3@stuy.edu, hliu3
+Haiyao Liu, hliu3[at]stuy.edu, hliu3
 
-Adeebur Rahman, arahman5@stuy.edu, arahman5
+Adeebur Rahman, arahman5[at]stuy.edu, arahman5
 
-Elvin Hwang, ehwang@stuy.edu, elvinhwang
+Elvin Hwang, ehwang[at]stuy.edu, elvinhwang
