@@ -20,13 +20,10 @@ public class Knight extends Character {
       post: initializes instance vars.
       =============================================*/
     public Knight() {
-	_hitPts = 125;
+	_hitPts = 115;
 	_strength = 100;
 	_defense = 40;
 	_attack = .5;
-	_defenseNorm = _defense;
-	_attackNorm = _attack;
-	_type = "Knight";
     }
 
 
@@ -40,5 +37,22 @@ public class Knight extends Character {
 	_name = name;
     }
 
+    //prepare a Knight for a special attack
+    public void specialize() {
+	_attack = .8;
+	_defense = 20;
+    }
+
+    //revert to normal mode
+    public void normalize() {
+	_attack = .5;
+	_defense = 40;
+    }
+
+    //returns string about Knight
+    public String about() {
+	return "Knight: Similar to warriors, but with more less health and more attack";
+    }
+    
 }//end class Knight
 

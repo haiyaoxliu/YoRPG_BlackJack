@@ -7,17 +7,14 @@
   class Character -- superclass for combatants in Ye Olde RPG
   =============================================*/
 
-public class Character {
+public abstract class Character {
 
     // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
     protected int _hitPts;
     protected int _strength;
     protected int _defense;
-    protected int _defenseNorm;
     protected double _attack;
-    protected double _attackNorm;
     protected String _name;
-    protected String _type;
     protected String _catchphrase;
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -32,10 +29,7 @@ public class Character {
 	_strength = 100;
 	_defense = 40;
 	_attack = .4;
-	_defenseNorm = _defense;
-	_attackNorm = _attack;
 	_name = "J. Doe";
-	_type = "Default Character";
     }
 
     public Character(String name) {
@@ -96,29 +90,12 @@ public class Character {
     }
 
     //prepare a Character for a special attack
-    public void specialize() {
-	_attack = 2 * _attackNorm;
-	_defense = _defenseNorm / 2;
-    }
+    public abstract void specialize();
 
     //revert to normal mode
-    public void normalize() {
-	_attack = _attackNorm;
-	_defense = _defenseNorm;
-    }
-
+    public abstract void normalize();
+    
     //returns a String describing a Character
-    public String about() {
-	String retStr = "";
-	retStr += "--------------------------\n";
-	retStr += "Character Info\n";
-	retStr += "Type: " + _type + "\n";
-	retStr += "Name: " + getName() + "\n";
-	retStr += "HitPts: " + _hitPts + "\n";
-	retStr += "Strength: " + _strength + "\n";
-	retStr += "Defense: " + getDefense() + "\n";
-	retStr += "Attack: " + _attack + "\n";
-	retStr += "--------------------------\n";
-	return retStr;
-    }
+    public abstract String about();
+    
 }//end class Character

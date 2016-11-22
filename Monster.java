@@ -26,12 +26,19 @@ public class Monster extends Character {
 	_strength = 20 + (int)( Math.random() * 45 ); // [20,65)
 	_defense = 20;
 	_attack = 1;
-	_defenseNorm = _defense;
-	_attackNorm = _attack;
-	_type = "Monster";
     }
 
+    public String about() {
+	return "Some random monster of unkown strength";
+    }
 
+    public void specialize() {
+
+    }
+
+    public void normalize() {
+
+    }
 }//end class Monster
 
 

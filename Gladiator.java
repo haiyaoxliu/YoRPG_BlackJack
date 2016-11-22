@@ -24,9 +24,6 @@ public class Gladiator extends Character {
 	_strength = 100;
 	_defense = 40;
 	_attack = .3;
-	_defenseNorm = _defense;
-	_attackNorm = _attack;
-	_type = "Gladiator";
     }
 
 
@@ -40,5 +37,21 @@ public class Gladiator extends Character {
 	_name = name;
     }
 
+    //prepare a Gladiator for a special attack
+    public void specialize() {
+	_attack = .6;
+	_defense = 20;
+    }
+
+    //revert to normal mode
+    public void normalize() {
+	_attack = .3;
+	_defense = 40;
+    }
+
+    //returns string about Gladiator
+    public String about() {
+	return "Gladiator: Similar to warriors, but with more health and less attack";
+    }
 }//end class Gladiator
 

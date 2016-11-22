@@ -29,9 +29,6 @@ public class Warrior extends Character {
 	_strength = 100;
 	_defense = 40;
 	_attack = .4;
-	_defenseNorm = _defense;
-	_attackNorm = _attack;
-	_type = "Warrior";
     }
 
 
@@ -45,5 +42,21 @@ public class Warrior extends Character {
 	_name = name;
     }
 
+    //prepare a Warrior for a special attack
+    public void specialize() {
+	_attack = .75;
+	_defense = 20;
+    }
+
+    //revert to normal mode
+    public void normalize() {
+	_attack = .4;
+	_defense = 40;
+    }
+
+    public String about() {
+	return "Warrior: the average fighter";
+    }
+    
 }//end class Warrior
 

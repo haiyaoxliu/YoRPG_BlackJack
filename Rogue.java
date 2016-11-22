@@ -24,9 +24,6 @@ public class Rogue extends Character {
 	_strength = 100;
 	_defense = 10;
 	_attack = .8;
-	_defenseNorm = _defense;
-	_attackNorm = _attack;
-	_type = "Rogue";
     }
 
 
@@ -40,5 +37,21 @@ public class Rogue extends Character {
 	_name = name;
     }
 
+    //prepare a Rogue for a special attack
+    public void specialize() {
+	_attack = 1;
+	_defense = 5;
+    }
+
+    //revert to normal mode
+    public void normalize() {
+	_attack = .8;
+	_defense = 10;
+    }
+
+    public String about() {
+	return "Rogue: Similar to Mages, but with more health and less attack";
+    }
+    
 }//end class Rogue
 

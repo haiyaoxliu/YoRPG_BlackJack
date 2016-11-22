@@ -24,9 +24,6 @@ public class Mage extends Character {
 	_strength = 100;
 	_defense = 10;
 	_attack = 1;
-	_defenseNorm = _defense;
-	_attackNorm = _attack;
-	_type = "Mage";
     }
 
 
@@ -39,6 +36,22 @@ public class Mage extends Character {
 	this();
 	_name = name;
     }
+    
+    //prepare a Mage for a special attack
+    public void specialize() {
+	_attack = 1.2;
+	_defense = 5;
+    }
 
+    //revert to normal mode
+    public void normalize() {
+	_attack = 1;
+	_defense = 10;
+    }
+
+    public  String about() {
+	return "Mage: a strong attacker with weak defense and health";
+    }
+    
 }//end class Mage
 

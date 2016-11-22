@@ -43,10 +43,7 @@ public class Shrek extends Character {
 	_strength = 1000;
 	_defense = 100;
 	_attack = 10;
-	_defenseNorm = _defense;
-	_attackNorm = _attack;
-	_type = "Troll";
-    _catchphrase = "You and what army?";
+	_catchphrase = "You and what army?";
     }
 
     /*=============================================
@@ -75,10 +72,13 @@ public class Shrek extends Character {
     
     public void specialize() {
         System.out.println("\"This is the part where you run away,\" monster.");
+	_attack = 100;
+	_defense = 1000;
     }
     
     public void normalize() {
-        
+	_attack = 10;
+	_defense = 100;     
     }
     
     public String about() {
