@@ -29,7 +29,7 @@ public class Monster extends Character {
     }
 
     public String about() {
-	return "Some random monster of unkown strength";
+	return "Some random monster of unknown strength";
     }
 
     public void specialize() {
